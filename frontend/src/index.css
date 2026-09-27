@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050e1d;
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071326;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a68;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Gold Gradient Effects */
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #fce082 0%, #d4af37 50%, #997819 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fff2af 0%, #e5b232 50%, #cca225 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #6ee7b7 0%, #10b981 50%, #047857 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Classes */
+.glass-card-dark {
+  background: rgba(11, 27, 56, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.glass-card-dark:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.glass-card-ivory {
+  background: linear-gradient(180deg, #fdfbf7 0%, #f4efe4 100%);
+  border: 1px solid #e5dccb;
+  color: #1a2233;
+}
+
+/* Subtle glow animations */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 8s infinite ease-in-out;
+}
